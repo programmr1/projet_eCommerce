@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="256a69f3-4996-4ed3-ad9f-0f0c08a590e8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/NOT.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/categories.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/connect.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/dashboard.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/includes/functions/functions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/includes/languages/arabic.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/includes/languages/english.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/includes/templates/footer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/includes/templates/header.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/includes/templates/navbar.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/init.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/items.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/layout/css/backend.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/layout/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/layout/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/layout/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/layout/js/backend.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/logout.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/members.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/page.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/templet.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap-5.3.8-dist.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="PHP File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;programmr1&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/programmr1/projet_eCommerce.git&quot;,
+    &quot;accountId&quot;: &quot;995579c8-5a6e-463b-94b7-bbfa60f231bb&quot;
+  }
+}</component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="3BngGzajfoevE4mgNCtqtST4Kyf" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/proj_web_all/projet_eCommerce&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-PS-253.31033.138" />
+        <option value="bundled-php-predefined-a98d8de5180a-0e0d91225499-com.jetbrains.php.sharedIndexes-PS-253.31033.138" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="256a69f3-4996-4ed3-ad9f-0f0c08a590e8" name="Changes" comment="" />
+      <created>1775130158264</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1775130158264</updated>
+      <workItem from="1775130160510" duration="674000" />
+      <workItem from="1775130840162" duration="12319000" />
+      <workItem from="1775159457797" duration="8000" />
+      <workItem from="1775268346452" duration="14880000" />
+      <workItem from="1775363219114" duration="2579000" />
+      <workItem from="1775366459180" duration="1542000" />
+      <workItem from="1775381969243" duration="9331000" />
+      <workItem from="1775481748502" duration="1175000" />
+      <workItem from="1775484011511" duration="5184000" />
+      <workItem from="1775532376854" duration="22675000" />
+      <workItem from="1775642428974" duration="39936000" />
+      <workItem from="1775802339218" duration="25270000" />
+      <workItem from="1775798319113" duration="1633000" />
+      <workItem from="1775943862565" duration="11594000" />
+      <workItem from="1776018853845" duration="13379000" />
+      <workItem from="1776112064649" duration="16433000" />
+      <workItem from="1776191542445" duration="16400000" />
+      <workItem from="1776262249720" duration="18929000" />
+      <workItem from="1776350787273" duration="13283000" />
+      <workItem from="1776431355350" duration="35548000" />
+      <workItem from="1776548536891" duration="9549000" />
+      <workItem from="1776609405585" duration="21001000" />
+      <workItem from="1776718231955" duration="1934000" />
+      <workItem from="1776720207878" duration="311000" />
+      <workItem from="1776720575615" duration="116000" />
+      <workItem from="1776720759834" duration="1115000" />
+      <workItem from="1776721985433" duration="103000" />
+      <workItem from="1776722232850" duration="140000" />
+      <workItem from="1776722420216" duration="34056000" />
+      <workItem from="1776865509369" duration="611000" />
+      <workItem from="1776870464376" duration="1397000" />
+      <workItem from="1776974329674" duration="3525000" />
+      <workItem from="1776989328668" duration="1202000" />
+      <workItem from="1777066247112" duration="4908000" />
+      <workItem from="1777152113918" duration="10918000" />
+      <workItem from="1777212664421" duration="8369000" />
+      <workItem from="1777253243487" duration="4767000" />
+      <workItem from="1777853841243" duration="3755000" />
+      <workItem from="1777932694321" duration="690000" />
+      <workItem from="1777941624475" duration="6660000" />
+      <workItem from="1778023055150" duration="50000" />
+      <workItem from="1778023118210" duration="2721000" />
+      <workItem from="1778107601002" duration="7631000" />
+      <workItem from="1778184728003" duration="3847000" />
+      <workItem from="1778355825378" duration="1183000" />
+      <workItem from="1778451390904" duration="86000" />
+      <workItem from="1778510434347" duration="1309000" />
+      <workItem from="1778979778267" duration="704000" />
+      <workItem from="1779045973267" duration="10811000" />
+      <workItem from="1779118035035" duration="13000" />
+      <workItem from="1779149900309" duration="2100000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
