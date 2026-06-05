@@ -4,36 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="256a69f3-4996-4ed3-ad9f-0f0c08a590e8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/NOT.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/categories.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/connect.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/dashboard.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/includes/functions/functions.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/includes/languages/arabic.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/includes/languages/english.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/includes/templates/footer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/includes/templates/header.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/includes/templates/navbar.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/init.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/items.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/layout/css/backend.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/layout/css/bootstrap-grid.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/layout/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/layout/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/layout/js/backend.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/logout.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/members.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/page.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/templet.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap-5.3.8-dist.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+    <list default="true" id="256a69f3-4996-4ed3-ad9f-0f0c08a590e8" name="Changes" comment="a">
+      <change afterPath="$PROJECT_DIR$/admin/comments.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/dashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/includes/functions/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/functions/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/includes/languages/english.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/languages/english.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/includes/templates/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/templates/navbar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/items.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/items.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/layout/css/backend.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/layout/css/backend.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/layout/js/backend.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/layout/js/backend.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,11 +144,33 @@
       <workItem from="1779045973267" duration="10811000" />
       <workItem from="1779118035035" duration="13000" />
       <workItem from="1779149900309" duration="2100000" />
+      <workItem from="1779224024361" duration="9528000" />
+      <workItem from="1779321781170" duration="4376000" />
+      <workItem from="1779667104244" duration="9863000" />
+      <workItem from="1779752789384" duration="4507000" />
+      <workItem from="1780415365120" duration="8000" />
+      <workItem from="1780437872157" duration="9690000" />
+      <workItem from="1780526836587" duration="5430000" />
+      <workItem from="1780603307304" duration="13576000" />
+      <workItem from="1780676143349" duration="10840000" />
     </task>
+    <task id="LOCAL-00001" summary="a">
+      <option name="closed" value="true" />
+      <created>1779224498421</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1779224498421</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="a" />
+    <option name="LAST_COMMIT_MESSAGE" value="a" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

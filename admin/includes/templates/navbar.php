@@ -363,6 +363,13 @@
                         Items</a></li>
                 <li class="nav-item"><a class="nav-link nav-link-c" href="categories.php?do=manage"><i class="bi bi-box-seam-fill"></i> categories </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-c" href="comments.php?do=manage">
+                        <i class="bi bi-chat-left-quote-fill"></i> comments
+                    </a>
+                </li>
+
+
                 <li class="nav-item"><a class="nav-link nav-link-c" href="members.php?do=manage"><i
                                 class="bi bi-people-fill"></i> Members</a></li>
 

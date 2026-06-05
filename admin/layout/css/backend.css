@@ -77,6 +77,11 @@ body{
 .latest{
     margin-top: 40px;
 }
+
+ .toggle-info {
+    color:#999;
+    cursor: pointer;
+}
 .card.latest-user{
     /*margin: 6px;*/
     width: 533px;

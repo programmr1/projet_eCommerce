@@ -1,47 +1,21 @@
-// $(function () {
-//     'use strict';
-//
-//     // 1. التعامل مع الـ Placeholder
-//     $('[placeholder]').focus(function () {
-//         $(this).attr('data-text', $(this).attr('placeholder'));
-//         $(this).attr('placeholder', '');
-//     }).blur(function () {
-//         $(this).attr('placeholder', $(this).attr('data-text'));
-//     });
-//
-//     // 2. إضافة علامة النجمة للحقول المطلوبة
-//     $('input').each(function () {
-//         if ($(this).attr('required') === 'required') {
-//             $(this).after('<span class="asterisk">*</span>');
-//         }
-//     });
-//
-//     // 3. رسالة التأكيد عند الحذف
-//     $('.confirm').click(function () {
-//         return confirm('هل أنت متأكد أنك تريد الحذف؟');
-//     });
-//
-//     // 4. إظهار وإخفاء العرض الكامل (التصحيح هنا)
-// // استخدام الـ Delegation لضمان التنفيذ
-//     $(document).on('click', '.cat h3', function () {
-//         $(this).next('.full-view').fadeToggle(200);
-//     });
-//
-//     $(document).on('click', '.option span', function () {
-//
-//         $(this).addClass('active').siblings('span').removeClass('active');
-//
-//         if ($(this).data('view') === 'full') {
-//             $('.cat .full-view').fadeIn(200);
-//         } else {
-//             $('.cat .full-view').fadeOut(200);
-//         }
-//
-//     });
-// });
+
 
 $(function () {
     'use strict';
+
+
+
+    $('.toggle-info').click(function () {
+        $(this).toggleClass('selected').closest('.panel').find('.card').first().toggle(200);
+
+        if($(this).hasClass('selected')){
+            $(this).html('   <i class="fa fa-minus fa-lg"></i>')
+        }
+        else{
+            $(this).html('    <i class="fa fa-plus fa-lg"></i>')
+
+        }
+    });
 
     // 1. Placeholder: إخفاء وإظهار النص المساعد
     $('[placeholder]').focus(function () {

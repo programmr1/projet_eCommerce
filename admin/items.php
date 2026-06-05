@@ -8,12 +8,19 @@
           $do = isset($_GET['do']) ? $_GET['do'] : 'manage';
           include 'init.php';
           if ($do == 'manage') {
-               $stmt = $con->prepare("SELECT  items.*,categories.categoriesN AS  category_name
-                                                      ,users.userName as user_name
-                                                       FROM items INNER JOIN categories ON 
-                                                       categories.categoriesID=items.catID 
-                                                       INNER JOIN users ON
-                                                       users.userID=items.memberID");
+               $stmt = $con->prepare("SELECT 
+i.itemsID,
+    i.itemName,
+    i.descriptionItem,
+    i.priceItem,
+        i.approve,
+    i.countryMade,
+   u.userName,
+    c.categoriesN
+    
+FROM items i 
+INNER JOIN categories c ON i.catID = c.categoriesID
+INNER JOIN users u ON i.memberID = u.userID");
                $stmt->execute();
                $rows = $stmt->fetchAll();
                ?>
@@ -64,8 +71,8 @@
                                                 <td class="text-info"><?php echo $raw['descriptionItem']; ?></td>
                                                 <td class="text-info"><?php echo $raw['priceItem']; ?></td>
                                                 <td class="text-light opacity-100"><?php echo $raw['countryMade']; ?></td>
-                                                <td class="text-light opacity-100"><?php echo $raw['user_name']; ?></td>
-                                                <td class="text-light opacity-100"><?php echo $raw['category_name']; ?></td>
+                                                <td class="text-light opacity-100"><?php echo $raw['userName']; ?></td>
+                                                <td class="text-light opacity-100"><?php echo $raw['categoriesN']; ?></td>
                                                 <td>
                                                     <div class="d-flex justify-content-center gap-2">
                                                         <a href="items.php?do=edit&itemsID=<?php echo $raw['itemsID']; ?>"
@@ -74,15 +81,26 @@
                                                         </a>
                                                         <a href="items.php?do=delete&itemsID=<?php echo $raw['itemsID']; ?>"
                                                            class="btn btn-danger btn-sm fw-bold rounded-3 shadow-sm px-3 confirm">
-                                                            <i class="bi bi-trash3-fill me-1"></i>delete
+                                                            <i class="bi bi-trash3-fill me-1"></i>Delete
                                                         </a>
-<!--                                               -->
+                                                         <?php
+
+                                                              if($raw['approve']===0){
+                                                                   echo '<a href="items.php?do=approve&itemsID='.$raw['itemsID'].'"
+                                                                        class="btn btn-info btn-sm fw-bold rounded-3 shadow-sm px-3">
+                                                                            <i class="fa fa-check"></i>approve </a>';
+
+                                                              }else{
+                                                                  echo '';
+                                                              }
+                                                         ?>
                                                     </div>
                                                 </td>
+
                                             </tr>
                                         <?php }
                                    } else {
-                                        echo "<tr><td colspan='6' class='p-4 text-white'>No Members Found</td></tr>";
+                                        echo "<tr><td colspan='6' class='p-4 text-white'>No items Found</td></tr>";
                                    }
                               ?>
                               </tbody>
@@ -268,9 +286,11 @@
                          } else {
                               $stmt = $con->prepare('insert into items(itemName,descriptionItem,priceItem,addDate,countryMade,statusItem,catID,memberID) values(?,?,?,now(),?,?,?,?)');
                               $stmt->execute(array($namIt, $descIt, $pricIt, $countIt, $statusIt,$categorie,$member));
+                              $theMsg="<div class='alert alert-success'>" . $stmt->rowCount() . ' Record Inserted</div>';
+                              echo 'تمت الاضافة بنجاح';
+                              redirectHome($theMsg,'back');
                          }
-                         //   $theMsg="<div class='alert alert-success'>" . $stmt->rowCount() . ' Record Inserted</div>';
-                         // redirectHome($theMsg,'back');
+
                     }
 
                     echo '</div>';
@@ -440,25 +460,46 @@
                     echo '<div class="container mt-5 text-center"><div class="alert alert-success">Record Updated</div></div>';
                } else {
                   echo  $theMsg = '<div class="alert alert-danger alert-dismissible fade show" role="alert"> sorry you cant browse this page directly</div>';
-//                    redirectHome($theMsg, 'back');
+                    redirectHome($theMsg, 'back');
                }
 
 
 
           } elseif ($do == 'delete') {
-              $item=isset($_GET['itemID'])&& is_numeric($_GET['id']) ? intval($_GET['itemID']) : 0;
-              $check=checkItem('userID','users',$item);
+               $item =isset($_GET['itemsID'])&&is_numeric($_GET['itemsID']) ? $_GET['itemsID'] : 0;
+              $check=checkItem('itemsID','items',$item);
               if($check >0){
+                  $stmt = $con->prepare("DELETE FROM items WHERE  itemsID = ?");
+                  $stmt->execute([$item]);
+                  echo '<div class="container mt-5 text-center"><div class="alert alert-success">Record Deleted</div></div>';
+
 
                }
+              else{
+                  echo'لم يتم الحذف يرجى التحقق من العنصر ';
+              }
+
+
+
 
           } elseif ($do == 'approve') {
+
+              $itemId=isset($_GET['itemsID']) && is_numeric($_GET['itemsID']) ? intval($_GET['itemsID']):0;
+              $check=checkItem('itemsID','items',$itemId);
+              if($check >0){
+                  $stmt = $con->prepare("UPDATE items SET approve = 1 WHERE itemsID = ?");
+                  $stmt->execute(array($itemId));
+                   echo '<div class="container mt-5 text-center"><div class="alert alert-success">Record Approved</div></div>';
+              }
+              else{
+                  echo 'erorrrrrrrrrrrrrrrrrr';
+              }
           }
 
           include $tpl . 'footer.php';
 
      } else {
-         echo 'hhhhhhhhhghghgjgjjjhhhhhhhhhhhhhhhhh';
+         echo 'لايمكنك الدخول الى هذه الصفحة مباشرة ';
 //          header('Location: index.php');
 //          exit();
      }
