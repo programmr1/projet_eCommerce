@@ -12,7 +12,16 @@
 //                    $query = 'where regStatus=0';
 //
 //               }
-               $stmt = $con->prepare("SELECT * FROM comments ");
+               $stmt = $con->prepare("SELECT 
+                                                c.c_id,      
+                                                c.comment, 
+                                                c.comment_date  ,
+                                                c.status,
+                                                u.userName,         
+                                                i.itemName        
+                                            FROM comments c
+                                            INNER JOIN users u ON c.user_id = u.userID
+                                            INNER JOIN items i ON c.item_id = i.itemsID; ");
                $stmt->execute();
                $rows = $stmt->fetchAll();
                ?>
@@ -23,7 +32,7 @@
                               comment Management <span class="badge bg-warning text-dark ms-2 fs-6">Admin Panel</span>
                          </h2>
                          <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-                         <a href="comments.php" class="btn btn-warning btn-sm px-4 fw-bold rounded-pill shadow-sm">
+                         <a href="comments.php?do=add" class="btn btn-warning btn-sm px-4 fw-bold rounded-pill shadow-sm">
                               <i class="bi bi-person-plus-fill me-1"></i> Add New
                          </a>
                     </div>
@@ -45,6 +54,7 @@
                                    <?php
                                         if (!empty($rows)) {
                                              foreach ( $rows as $raw) {
+                                                 // $raw[$i]['c_id']
                                                   ?>
                                                   <tr class="border-bottom border-dark">
                                                        <td class="fw-bold"><span
@@ -58,8 +68,8 @@
                                                                  <span class="fw-semibold"><?php echo $raw['comment']; ?></span>
                                                             </div>
                                                        </td>
-                                                       <td class="text-info"><?php echo $raw['item_id']; ?></td>
-                                                       <td class="text-info"><?php echo $raw['user_id']; ?></td>
+                                                      <td class="text-info"><?php echo $raw['itemName']; ?></td>
+                                                      <td class="text-info"><?php echo $raw['userName']; ?></td>
 <!--                                                       <td class="text-light opacity-100">--><?php //echo $raw['fullname']; ?><!--</td>-->
                                                        <td class="text-light opacity-25"><?php echo $raw['comment_date']; ?></td>
                                                        <td>
@@ -101,9 +111,9 @@
                <?php
           }
           elseif ($do == 'add') { ?>
-               <h1 class="text-center mb-4 fw-bold mt-5">
-                    <i class="bi bi-person-gear me-2"></i>Add comment
-               </h1>
+              <h1 class="text-center mb-4 fw-bold mt-5">
+                  <i class="bi bi-chat-left-text-fill me-2 text-primary"></i>Add comment
+              </h1>
                <div class="container">
                     <div class="row justify-content-center">
                          <div class="col-md-7 col-lg-5">
@@ -117,31 +127,52 @@
                                                          class="form-control border-start-0 rounded-end-3"
                                                          placeholder="Enter comment" autocomplete="off" >
                                              </div>
-                                             <div class="input-group input-group-sm mb-3">
-                                        <span class="input-group-text bg-body-secondary border-end-0 rounded-start-3"><i
-                                                class="bi bi-lock-fill"></i></span>
-                                                  <input type="text" name="password" id="password"
-                                                         class="form-control border-start-0 rounded-end-3"
-                                                         placeholder="Enter password" autocomplete="new-password" >
-                                                  <button class="btn btn-outline-secondary border-start-0 rounded-end-3"
-                                                          type="button" id="togglePass">
-                                                       <i class="bi bi-eye-slash"></i>
-                                                  </button>
-                                             </div>
-                                             <div class="input-group input-group-sm mb-3">
-                                        <span class="input-group-text bg-body-secondary border-end-0 rounded-start-3"><i
-                                                class="bi bi-envelope-fill"></i></span>
-                                                  <input type="email" name="item_com" id="email"
-                                                         class="form-control border-start-0 rounded-end-3"
-                                                         placeholder="name@example.com" >
-                                             </div>
+
+
+                                            <div class="input-group input-group-sm mb-3">
+                                                 <span class="input-group-text bg-body-secondary border-end-0 rounded-start-3">
+                                                      <i class="bi bi-box-seam-fill"></i>
+                                                 </span>
+                                                <select name="item_id" id="item_id" class="form-select border-start-0 rounded-end-3" required>
+                                                    <option value="" selected disabled>اختر المنتج...</option>
+                                                     <?php
+                                                          // جلب المنتجات من جدول المنتجات
+                                                          $stmtItems = $con->prepare("SELECT categoriesID, categoriesN FROM categories");
+                                                          $stmtItems->execute();
+                                                          $items = $stmtItems->fetchAll();
+
+                                                          foreach ($items as $item) {
+                                                               echo "<option value='" . $item['categoriesID'] . "'>" . $item['categoriesN'] . "</option>";
+                                                          }
+                                                     ?>
+                                                </select>
+                                            </div>
+
+
+                                            <div class="input-group input-group-sm mb-3">
+                                                <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+                                                <select name="user_com" class="form-select" required>
+                                                    <option value="" selected disabled>اختر المستخدم...</option>
+                                                     <?php
+                                                          $stmt = $con->prepare("SELECT userID, userName FROM users");
+                                                          $stmt->execute();
+                                                          foreach ($stmt->fetchAll() as $user) {
+                                                               echo "<option value='" . $user['userID'] . "'>" . $user['userName'] . "</option>";
+                                                          }
+                                                     ?>
+                                                </select>
+                                            </div>
+
+
                                              <div class="input-group input-group-sm mb-3">
                                         <span class="input-group-text bg-body-secondary border-end-0 rounded-start-3"><i
                                                 class="bi bi-person-badge-fill"></i></span>
-                                                  <input type="text" name="full" id="full"
+                                                  <input type="date" name="com_data" id="com_data"
                                                          class="form-control border-start-0 rounded-end-3"
-                                                         placeholder="Enter full name" >
+                                                         placeholder="Enter data comment" >
                                              </div>
+
+
                                              <div class="d-grid mt-4">
                                                   <button type="submit" class="btn btn-primary btn-sm rounded-3 py-2">
                                                        <i class="bi bi-check-lg me-1"></i> Save comment
@@ -161,38 +192,33 @@
                if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     echo '<div class="container mt-5 text-center"><h1>Insert comment</h1>';
 
-                    $user = $_POST['comment'];
-                    $pass = $_POST['password'];
-                    $mail = $_POST['item_com'];
-                    $full = $_POST['full'];
+                    $comment = $_POST['comment'];
+                    $user_com = $_POST['user_com'];
+                    $item_com = $_POST['item_id'];
+                    $com_data = $_POST['com_data'];
 
                     $formErrors = array();
 
                     // 1. التحقق من الحقول الفارغة
-                    if (strlen($user) < 4) {
-                         $formErrors[] = "Username is too short";
+                    if (strlen($comment) < 4) {
+                         $formErrors[] = "comment is too short";
                     }
-                    if (strlen($user) > 20) {
+                    if (strlen($comment) > 20) {
                          $formErrors[] = "Username is bag short";
                     }
-                    if (empty($user)) {
+                    if (empty($comment)) {
                          $formErrors[] = "<strong>empty</strong>";
                     }
-                    if (empty($pass)) {
+                    if (empty($user_com)) {
                          $formErrors[] = "Password empty short";
                     }
-                    if (empty($mail)) {
-                         $formErrors[] = "Email empty short";
+                    if (empty($item_com)) {
+                         $formErrors[] = "item empty ";
                     }
-                    if (empty($full)) {
-                         $formErrors[] = "Full name is too short";
+                    if (empty($com_data)) {
+                         $formErrors[] = "date time add comment empty";
                     }
-                    $check = checkItem('comment', 'comments', $user);
 
-                    // فحص اسم المستخدم
-                    if ($check == 1) {
-                         $formErrors[] = 'عذراً، <strong>اسم المستخدم</strong> هذا موجود بالفعل.';
-                    }
 
 
                     foreach ($formErrors as $error) {
@@ -201,8 +227,8 @@
 
                     if (empty($formErrors)) {
 
-                         $stmt = $con->prepare("INSERT INTO comments (comment, password, item_com, fullname,regStatus, comment_data) VALUES (?, ?, ?, ?,1, NOW())");
-                         $stmt->execute(array($user, $pass, $mail, $full,));
+                         $stmt = $con->prepare("INSERT INTO comments (comment, status, comment_date, item_id,user_id) VALUES (?, 1,NOW(), ?,?)");
+                         $stmt->execute(array($comment, $item_com, $user_com));
                          echo '<div class="alert alert-success mt-3">' . $stmt->rowCount() . ' Record Inserted</div>';
 
                     }
@@ -289,9 +315,9 @@
 
                                            <!-- أيقونة التاريخ -->
                                            <div class="input-group input-group-sm mb-3">
-                                   <span class="input-group-text bg-body-secondary border-end-0 rounded-start-3">
+                                      <span class="input-group-text bg-body-secondary border-end-0 rounded-start-3">
                                         <i class="bi bi-calendar-date-fill"></i>
-                                   </span>
+                                      </span>
                                                <input type="date" name="com_data" id="com_data"
                                                       value="<?php echo $rowUser['comment_date'] ?>"
                                                       class="form-control border-start-0 rounded-end-3">
