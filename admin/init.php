@@ -11,11 +11,6 @@ include $lang.'english.php';
 include $func.'functions.php';
 include $tpl.'header.php' ;
 
-if (isset($_SESSION['username'])) {
-    include $tpl.'navbar.php';
-}else{
-
-}
 
 
 ?>

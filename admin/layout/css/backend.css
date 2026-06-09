@@ -201,3 +201,42 @@ cursor: pointer
     border-radius: 6px;
 }/*end category pag*/
 
+/* Start Comment Bubble */
+
+.comment-box {
+    position: relative;
+    background-color: #e9ecef;
+    padding: 6px 12px;
+    border-radius: 6px;
+    color: #333;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    margin-left: 10px; /* مسافة بسيطة لاحتواء السهم */
+}
+
+/* السهم الداخلي (يشير لليسار) */
+.comment-box::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -10px; /* مكان السهم على اليسار */
+    transform: translateY(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #e9ecef transparent transparent;
+}
+
+/* الإطار الخارجي للسهم */
+.comment-box::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -12px; /* أبعد قليلاً ليعمل كإطار */
+    transform: translateY(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent #ccc transparent transparent;
+    z-index: -1;
+}
+/* End Comment Bubble */
+/* End Comment Bubble */

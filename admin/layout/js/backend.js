@@ -6,15 +6,17 @@ $(function () {
 
 
     $('.toggle-info').click(function () {
-        $(this).toggleClass('selected').closest('.panel').find('.card').first().toggle(200);
+        $(this).toggleClass('selected');
 
-        if($(this).hasClass('selected')){
-            $(this).html('   <i class="fa fa-minus fa-lg"></i>')
+        // تغيير الأيقونة
+        if ($(this).hasClass('selected')) {
+            $(this).html('<i class="bi bi-minus-lg"></i>');
+        } else {
+            $(this).html('<i class="bi bi-plus-lg"></i>');
         }
-        else{
-            $(this).html('    <i class="fa fa-plus fa-lg"></i>')
 
-        }
+        // الوصول الصحيح للكارد مع استخدام stop لمنع تداخل الحركات وسرعة منطقية (300ms)
+        $(this).closest('.panel').find('.card').stop(true, true).slideToggle(300);
     });
 
     // 1. Placeholder: إخفاء وإظهار النص المساعد

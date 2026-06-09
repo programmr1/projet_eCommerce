@@ -15,7 +15,7 @@
                $stmt = $con->prepare("SELECT 
                                                 c.c_id,      
                                                 c.comment, 
-                                                c.comment_date  ,
+                                                c.comment_date,
                                                 c.status,
                                                 u.userName,         
                                                 i.itemName        

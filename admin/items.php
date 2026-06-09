@@ -9,20 +9,20 @@
           include 'init.php';
           if ($do == 'manage') {
                $stmt = $con->prepare("SELECT 
-i.itemsID,
-    i.itemName,
-    i.descriptionItem,
-    i.priceItem,
-        i.approve,
-    i.countryMade,
-   u.userName,
-    c.categoriesN
-    
-FROM items i 
-INNER JOIN categories c ON i.catID = c.categoriesID
-INNER JOIN users u ON i.memberID = u.userID");
-               $stmt->execute();
-               $rows = $stmt->fetchAll();
+                            i.itemsID,
+                                i.itemName,
+                                i.descriptionItem,
+                                i.priceItem,
+                                    i.approve,
+                                i.countryMade,
+                               u.userName,
+                                c.categoriesN
+                                
+                            FROM items i 
+                            INNER JOIN categories c ON i.catID = c.categoriesID
+                            INNER JOIN users u ON i.memberID = u.userID");
+                  $stmt->execute();
+                  $rows = $stmt->fetchAll();
                ?>
               <div class="container mt-5">
                   <div class="d-flex justify-content-between align-items-center mb-4 p-3 bg-dark shadow-sm rounded-4 border-start border-4 border-warning">
@@ -406,6 +406,7 @@ INNER JOIN users u ON i.memberID = u.userID");
                                       </div>
 
 
+
                                       <div class="input-group mb-3 shadow-sm rounded-3 overflow-hidden">
                                             <span class="input-group-text bg-white border-end-0">
                                                 <i class="bi bi-tag-fill text-primary status-icon"></i>
@@ -435,10 +436,100 @@ INNER JOIN users u ON i.memberID = u.userID");
                                       </div>
                                   </form>
                               </div>
-                          </div>
+                              </div>
+                          <h1>manage comment  : the <?php echo $rowItem['itemName']; ?></h1>
+
                       </div>
-                  </div>
-              </div>
+
+                                  <?php
+                                    $stmt = $con->prepare("SELECT
+                                    c.c_id,
+                                    c.comment,
+                                    c.comment_date,
+                                    c.status,
+                                    u.userName,
+                                    i.itemName
+                                    FROM comments c
+                                    INNER JOIN users u ON c.user_id = u.userID
+                                    INNER JOIN items i ON c.item_id = i.itemsID WHERE c.item_id = ? ");
+                                    $stmt->execute(array($rowItem['itemsID']));
+                                    $rows = $stmt->fetchAll();
+                                  ?>
+                                  <div class="container mt-5">
+
+
+                                      <div class="card bg-secondary bg-opacity-10 border-0 shadow-lg rounded-4 overflow-hidden">
+                                          <div class="table-responsive">
+                                              <table class="table table-dark table-hover align-middle mb-0 text-center">
+                                                  <thead class="table-warning">
+                                                  <tr>
+                                                      <th class="py-3 fw-bold border-0 text-dark">ID</th>
+                                                      <th class="py-3 fw-bold border-0 text-dark">comment </th>
+                                                      <th class="py-3 fw-bold border-0 text-dark">Item Name</th>
+                                                      <th class="py-3 fw-bold border-0 text-dark">user Name</th>
+                                                      <th class="py-3 fw-bold border-0 text-dark">Added comment_data</th>
+                                                      <th class="py-3 fw-bold border-0 text-dark text-nowrap">Control Actions</th>
+                                                  </tr>
+                                                  </thead>
+                                                  <tbody class="border-top-0">
+                                                  <?php
+                                                       if (!empty($rows)) {
+                                                            foreach ( $rows as $raw) {
+                                                                 ?>
+                                                                <tr class="border-bottom border-dark">
+                                                                    <td class="fw-bold"><span
+                                                                                class="text-warning"></span><?php echo $raw['c_id']; ?></td>
+                                                                    <td>
+                                                                        <div class="d-flex align-items-center justify-content-center">
+                                                                            <div class="bg-warning text-dark rounded-circle d-flex align-items-center justify-content-center me-2"
+                                                                                 style="width: 30px; height: 30px;">
+                                                                                <i class="bi bi-person-fill"></i>
+                                                                            </div>
+                                                                            <span class="fw-semibold"><?php echo $raw['comment']; ?></span>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="text-info"><?php echo $raw['itemName']; ?></td>
+                                                                    <td class="text-info"><?php echo $raw['userName']; ?></td>
+                                                                    <!--                                                       <td class="text-light opacity-100">--><?php //echo $raw['fullname']; ?><!--</td>-->
+                                                                    <td class="text-light opacity-25"><?php echo $raw['comment_date']; ?></td>
+                                                                    <td>
+                                                                        <div class="d-flex justify-content-center gap-2">
+                                                                            <a href="comments.php?do=edit&c_id=<?php echo $raw['c_id']; ?>"
+                                                                               class="btn btn-info btn-sm text-white fw-bold rounded-3 shadow-sm px-3">
+                                                                                <i class="bi bi-pencil-square me-1"></i>Edit
+                                                                            </a>
+                                                                            <a href="comments.php?do=delete&c_id=<?php echo $raw['c_id']; ?>"
+                                                                               class="btn btn-danger btn-sm fw-bold rounded-3 shadow-sm px-3 confirm">
+                                                                                <i class="bi bi-trash3-fill me-1"></i>delete
+                                                                            </a>
+                                                                            <a>
+                                                                                 <?php
+                                                                                      if (!($raw['status'] === 1)) {
+                                                                                           echo "<a 
+                                                                                        href='comments.php?do=activate&c_id=" . $raw['c_id'] . "' 
+                                                                                        class='btn btn-info activate'>
+                                                                                        <i class='fa fa-check'></i> Activate</a>";
+
+                                                                                      }
+                                                                                 ?>
+                                                                            </a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            <?php }
+                                                       } else {
+                                                            echo "<tr><td colspan='6' class='p-4 text-white'>No Comment Found</td></tr>";
+                                                       }
+                                                  ?>
+                                                  </tbody>
+                                              </table>
+                                          </div>
+                                      </div>
+                                  </div>
+
+
+                              </div>
+                          </div>
                <?php
                 }
 

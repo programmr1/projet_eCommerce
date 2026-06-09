@@ -5,9 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="256a69f3-4996-4ed3-ad9f-0f0c08a590e8" name="Changes" comment="a">
+      <change afterPath="$PROJECT_DIR$/connect.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/comments.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/comments.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/dashboard.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/includes/templates/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/templates/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/init.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/init.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/items.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/items.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/layout/css/backend.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/layout/css/backend.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/layout/css/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/layout/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/layout/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/layout/js/backend.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/layout/js/backend.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap-5.3.8-dist.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +83,21 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\proj_web_all\projet_eCommerce" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="comments.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" engineId="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" uri="http://localhost:63342/projet_eCommerce/admin/comments.php" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.comments.php" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -147,7 +173,9 @@
       <workItem from="1780526836587" duration="5430000" />
       <workItem from="1780603307304" duration="13576000" />
       <workItem from="1780676143349" duration="21799000" />
-      <workItem from="1780763770377" duration="726000" />
+      <workItem from="1780763770377" duration="16986000" />
+      <workItem from="1780861932468" duration="13200000" />
+      <workItem from="1780963859814" duration="8140000" />
     </task>
     <task id="LOCAL-00001" summary="a">
       <option name="closed" value="true" />
@@ -165,7 +193,15 @@
       <option name="project" value="LOCAL" />
       <updated>1780694946676</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="a">
+      <option name="closed" value="true" />
+      <created>1780765425571</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1780765425571</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
