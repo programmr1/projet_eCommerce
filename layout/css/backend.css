@@ -1,0 +1,242 @@
+/*start login form*/
+body{
+    background-color: #F4F4F4;
+}
+
+.login{
+    width: 300px;
+    margin: 100px auto;
+}
+.login input{
+    margin-bottom: 10px;
+}
+.login .btn{
+    background-color: #008dde;
+}
+
+.login .form-control{
+    background-color: #EAEAEA ;
+}
+.form-control{
+    position:relative ;
+}
+.asterisk{
+    font-size: 30px;
+    position: absolute;
+    right: 30px;
+    top: 80px;
+    color: red;
+}
+/*start dashboard*/
+.row{
+    flex-wrap: nowrap;
+
+}
+.home-stats .stat{
+    background-color: #eee;
+    border: 1px solid #ccc;
+    padding:20px;
+    font-size: 15px;
+    color:#fff;
+    border-radius: 20px;
+}
+
+.home-stats .stat span{
+    display: block;
+    font-size: 50px;
+
+}
+.home-stats .stat span a{
+    color: #fff;
+    text-decoration: none;
+}
+.home-stats .st-member{
+    height: 139px;
+    font-size: 17px;
+    background-color: #0a53be;
+    text-decoration: white;
+    text-decoration: none;
+
+}
+.home-stats .st-member .font {
+    margin-top: -42px;
+    font-size: 35px;
+    text-decoration: none;
+}
+.home-stats .st-pending{
+    background-color: #c0392b;
+}
+.home-stats .st-items{
+    background-color: #d35400;
+    text-decoration: white;
+}
+.home-stats .st-comments{
+    background-color: #571e1e;
+    text-decoration: white;
+}
+.latest{
+    margin-top: 40px;
+}
+
+ .toggle-info {
+    color:#999;
+    cursor: pointer;
+}
+.card.latest-user{
+    /*margin: 6px;*/
+    width: 533px;
+    overflow: hidden;
+
+}
+
+.card.latest-user li {
+    overflow: hidden;
+    padding: 6px 0 3px 8px;
+    text-decoration: none;
+
+}
+
+.card .latest-user .btn-success{
+    padding:3px 0;
+    margin-left: 82%;
+    margin-bottom: 4px;
+    font-size: 14px;
+
+}
+
+
+/*end dashboard*/
+
+/*start category pag*/
+.categories .vvvv h3{
+    background-color: #eee;
+    margin:0 0 10px;
+}
+
+.categories hr{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.categories .vvvv{
+    padding: 15px;
+    position:relative;
+}
+
+.categories .cat{
+    padding: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* الزر مخفي بالبداية */
+.categories .cat .hidden-btn{
+    position: absolute;
+    top: 10px;
+    right: -100px; /* خارج العنصر */
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.categories .cat .hidden-btn a{
+    display: inline-block;
+    margin: 5px;
+    font-weight: 800;
+
+}
+.categories .option a{
+    color:#888;
+    text-decoration: none;
+}
+
+.categories .option span{
+    color: #888;
+cursor: pointer
+}
+.container .option .active{
+    /*text-decoration: none;*/
+    font-weight: bold;
+    color: #f00;
+}
+
+/* عند الهفر يظهر */
+.categories .cat:hover{
+    background-color: #eee;
+}
+
+.categories .cat:hover .hidden-btn{
+    right: 10px;
+    opacity: 1;
+
+}
+
+.categories .vvvv:last-of-type > hr {
+    display: none;
+}
+
+.categories .vvvv .visibility{
+    background-color: #c0392b;
+    color: #fff;
+    padding: 4px 6px;
+    margin-right: 10px;
+    border-radius: 6px;
+}
+
+.categories .vvvv .comment{
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 4px 6px;
+    margin-right: 10px;
+    border-radius: 6px;
+}
+.categories .cat .active{
+    color: #c0392b;
+}
+
+.categories .vvvv .advertises{
+    background-color: #c0392b;
+    color: #fff;
+    padding: 4px 6px;
+    margin-right: 10px;
+    border-radius: 6px;
+}/*end category pag*/
+
+/* Start Comment Bubble */
+
+.comment-box {
+    position: relative;
+    background-color: #e9ecef;
+    padding: 6px 12px;
+    border-radius: 6px;
+    color: #333;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    margin-left: 10px; /* مسافة بسيطة لاحتواء السهم */
+}
+
+/* السهم الداخلي (يشير لليسار) */
+.comment-box::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -10px; /* مكان السهم على اليسار */
+    transform: translateY(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #e9ecef transparent transparent;
+}
+
+/* الإطار الخارجي للسهم */
+.comment-box::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -12px; /* أبعد قليلاً ليعمل كإطار */
+    transform: translateY(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent #ccc transparent transparent;
+    z-index: -1;
+}
+/* End Comment Bubble */
+/* End Comment Bubble */

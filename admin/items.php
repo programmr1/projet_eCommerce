@@ -388,19 +388,20 @@
                                                 <i class="bi bi-tag-fill text-primary status-icon"></i>
                                             </span>
                                           <div class="col-sm-10 col-sm-6">
-                                              <select class="form-select border-start-0 fw-bold status-select"
-                                                      name="member"
-                                                      id="member">
+                                              <select class="form-select border-start-0 fw-bold status-select" name="member" id="member">
                                                   <option value='0'>............</option>
-                                                   <?php
-                                                        $stmt=$con->prepare("SELECT * FROM items");
-                                                        $stmt->execute();
-                                                        $users = $stmt->fetchAll();
-                                                        foreach ($users as $hi) {
-                                                             echo '<option value="'.$hi['itemsID'].'">'.$hi['itemName'].'</option>';
-                                                        }
+                                                  <?php
+                                                  $stmt = $con->prepare("SELECT * FROM items");
+                                                  $stmt->execute();
+                                                  $items = $stmt->fetchAll();
+                                                  $currentItemId = $_GET['itemsID'];
+                                                  foreach ($items as $hi) {
+                                                      $selected = ($hi['itemsID'] == $currentItemId) ? 'selected' : '';
 
-                                                   ?>
+
+                                                      echo '<option value="' . $hi['itemsID'] . '" ' . $selected . '>' . $hi['itemName'] . '</option>';
+                                                  }
+                                                  ?>
                                               </select>
                                           </div>
                                       </div>
@@ -412,19 +413,22 @@
                                                 <i class="bi bi-tag-fill text-primary status-icon"></i>
                                             </span>
                                           <div class="col-sm-10 col-sm-6">
-                                              <select class="form-select border-start-0 fw-bold status-select"
-                                                      name="categorie"
-                                                      id="member">
+                                              <select class="form-select border-start-0 fw-bold status-select" name="categorie" id="member">
                                                   <option value='0'>............</option>
-                                                   <?php
-                                                        $stmt=$con->prepare("SELECT * FROM categories");
-                                                        $stmt->execute();
-                                                        $cat = $stmt->fetchAll();
-                                                        foreach ($cat as $hi) {
-                                                             echo '<option value="'.$hi['categoriesID'].'">'.$hi['categoriesN'].'</option>';
-                                                        }
+                                                  <?php
+                                                  $stmt = $con->prepare("SELECT * FROM categories");
+                                                  $stmt->execute();
+                                                  $cat = $stmt->fetchAll();
+                                                  $catID_saved=$_GET['itemsID'];
 
-                                                   ?>
+                                                  // ملاحظة: تأكد أن $catID_saved يحتوي على قيمة الـ ID المخزنة للعنصر الذي تعدله
+                                                  foreach ($cat as $hi) {
+                                                      // إذا تطابق الـ ID المخزن مع الـ ID في اللوب، اجعله selected
+                                                      $selected = ($hi['categoriesID'] == $catID_saved) ? 'selected' : '';
+
+                                                      echo '<option value="'.$hi['categoriesID'].'" '.$selected.'>'.$hi['categoriesN'].'</option>';
+                                                  }
+                                                  ?>
                                               </select>
                                           </div>
                                       </div>

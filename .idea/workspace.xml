@@ -5,20 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="256a69f3-4996-4ed3-ad9f-0f0c08a590e8" name="Changes" comment="a">
-      <change afterPath="$PROJECT_DIR$/connect.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/categories.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/functions/functions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/templates/footer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/templates/header.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/templates/navbar.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/layout/css/backend.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/layout/js/backend.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/comments.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/comments.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/dashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/includes/functions/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/functions/functions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/includes/templates/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/templates/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/init.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/init.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/includes/templates/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/templates/navbar.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/items.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/items.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/layout/css/backend.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/layout/css/backend.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/layout/css/bootstrap-grid.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/layout/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/layout/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/layout/js/backend.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/layout/js/backend.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap-5.3.8-dist.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/init.php" beforeDir="false" afterPath="$PROJECT_DIR$/init.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,9 +50,73 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/programmr1/projet_eCommerce.git&quot;,
-    &quot;accountId&quot;: &quot;995579c8-5a6e-463b-94b7-bbfa60f231bb&quot;
+    &quot;accountId&quot;: &quot;342d4f75-3ea1-4a78-b591-2f3eb343d9d6&quot;
   }
 }</component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0" />
+      <entry key="S10" value="1.0" />
+      <entry key="S30" value="1.0" />
+      <entry key="S60" value="1.0" />
+      <entry key="M2" value="1.0000000000018823" />
+      <entry key="M5" value="1.0000764508182522" />
+      <entry key="M10" value="1.028667766660132" />
+      <entry key="M15" value="1.2133687683872643" />
+      <entry key="M30" value="2.633324608812929" />
+      <entry key="H1" value="5.582118276815019" />
+      <entry key="H2" value="8.70641715019692" />
+      <entry key="H4" value="11.005288876007615" />
+      <entry key="D1" value="13.444207684486898" />
+      <entry key="W1" value="13.919089047090191" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="2.3999861729028014E-275" />
+      <entry key="S10" value="4.898965373324047E-138" />
+      <entry key="S30" value="1.6983811286959793E-46" />
+      <entry key="S60" value="1.3044148963896898E-23" />
+      <entry key="M2" value="3.7204470654441865E-12" />
+      <entry key="M5" value="3.4056485327195906E-5" />
+      <entry key="M10" value="0.00871944113431016" />
+      <entry key="M15" value="0.058613637950775496" />
+      <entry key="M30" value="0.40992430897528825" />
+      <entry key="H1" value="1.1023649414671075" />
+      <entry key="H2" value="1.8157889033987609" />
+      <entry key="H4" value="2.333069729538315" />
+      <entry key="D1" value="2.8767310161617887" />
+      <entry key="W1" value="2.982068024303323" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.3815648022401398" />
+      <entry key="MS500" value="0.8247335486100814" />
+      <entry key="S2" value="0.9529682144339913" />
+      <entry key="S5" value="0.9809149782536248" />
+      <entry key="S10" value="0.9904115196490926" />
+      <entry key="S30" value="0.9967935696762554" />
+      <entry key="S60" value="0.9983954976241907" />
+      <entry key="M2" value="0.9991974267557494" />
+      <entry key="M5" value="0.9997891252883485" />
+      <entry key="M10" value="1.0371709806367397" />
+      <entry key="M15" value="1.2715771226551569" />
+      <entry key="M30" value="3.0419430114456247" />
+      <entry key="H1" value="6.682612610774988" />
+      <entry key="H2" value="10.520604657664665" />
+      <entry key="H4" value="13.337308864148127" />
+      <entry key="D1" value="16.32071926787264" />
+      <entry key="W1" value="16.901124480429765" />
+    </decayedShown>
+  </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -59,52 +125,59 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="3BngGzajfoevE4mgNCtqtST4Kyf" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/proj_web_all/projet_eCommerce&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/proj_web_all/projet_eCommerce",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\proj_web_all\projet_eCommerce" />
+      <recent name="D:\proj_web_all\projet_eCommerce\includes\functions" />
+      <recent name="D:\proj_web_all\projet_eCommerce\includes\templates" />
+      <recent name="D:\proj_web_all\projet_eCommerce\layout\js" />
+      <recent name="D:\proj_web_all\projet_eCommerce\layout\css" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="comments.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" engineId="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" uri="http://localhost:63342/projet_eCommerce/admin/comments.php" useBuiltInWebServerPort="true">
+    <configuration default="true" type="JavascriptDebugType" engineId="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3">
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JavaScript Debug.comments.php" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-PS-253.31033.138" />
-        <option value="bundled-php-predefined-a98d8de5180a-0e0d91225499-com.jetbrains.php.sharedIndexes-PS-253.31033.138" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-PS-261.25134.104" />
+        <option value="bundled-php-predefined-a98d8de5180a-6bbb74dbab74-com.jetbrains.php.sharedIndexes-PS-261.25134.104" />
       </set>
     </attachedChunks>
+  </component>
+  <component name="StructureViewState">
+    <option name="selectedTab" value="PHP" />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -175,7 +248,15 @@
       <workItem from="1780676143349" duration="21799000" />
       <workItem from="1780763770377" duration="16986000" />
       <workItem from="1780861932468" duration="13200000" />
-      <workItem from="1780963859814" duration="8140000" />
+      <workItem from="1780963859814" duration="12254000" />
+      <workItem from="1780980349493" duration="314000" />
+      <workItem from="1780980783239" duration="13000" />
+      <workItem from="1780980869638" duration="168000" />
+      <workItem from="1780981178653" duration="10000" />
+      <workItem from="1780981276384" duration="93000" />
+      <workItem from="1780981586339" duration="8901000" />
+      <workItem from="1781018949326" duration="11778000" />
+      <workItem from="1781124940899" duration="16897000" />
     </task>
     <task id="LOCAL-00001" summary="a">
       <option name="closed" value="true" />
@@ -201,11 +282,38 @@
       <option name="project" value="LOCAL" />
       <updated>1780765425571</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="a">
+      <option name="closed" value="true" />
+      <created>1780974914954</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1780974914954</updated>
+    </task>
+    <task id="LOCAL-00005" summary="a">
+      <option name="closed" value="true" />
+      <created>1780974933116</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1780974933116</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="a" />

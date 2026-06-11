@@ -1,6 +1,15 @@
 <?php
      ob_start();
 
+     function getItem($catId)
+     {
+         global $con;
+         $sqlItem= $con->prepare("SELECT * FROM items WHERE catID=?  ");
+             $sqlItem->execute(array($catId));
+             $itemDis= $sqlItem->fetchAll();
+         return $itemDis;
+
+     }
      function getCat()
      {
          global $con;
@@ -41,8 +50,7 @@ function redirectHome($theMsg,$url=null,$seconds=10){
      exit();
      }
 
-     function checkItem($select,$from,$value)
-     {
+     function checkItem($select,$from,$value){
      global $con;
      $statement=$con->prepare("SELECT $select FROM $from WHERE $select= ?");
 

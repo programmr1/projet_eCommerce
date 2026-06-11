@@ -1,22 +1,3 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-       <title><?php getTitle(); ?></title>
-            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-            <link rel="stylesheet" href='<?php echo $css; ?>backend.css?>'>
-</head>
-<body>
-
-
-<!--start navbar-->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
@@ -26,7 +7,7 @@
         --bg: #0b0f19;
         --accent: #00e68a;
         --text: #e0e4ea;
-        --muted: #fff;
+        --muted: #5e6a7e;
         --card: #131a2b;
         --border: rgba(255, 255, 255, 0.06);
     }
@@ -376,7 +357,7 @@
 
         <div class="collapse navbar-collapse collapse-c" id="navC">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-1 mt-2 mt-lg-0">
-                <li class="nav-item"><a class="nav-link nav-link-c active" href="../../dashboard.php"><i class="bi bi-house-fill"></i>
+                <li class="nav-item"><a class="nav-link nav-link-c active" href="index.php"><i class="bi bi-house-fill"></i>
                         الرئيسية</a></li>
                 <li class="nav-item"><a class="nav-link nav-link-c" href="items.php?do=manage"><i class="bi bi-bar-chart-line-fill"></i>
                         Items</a></li>
@@ -398,35 +379,35 @@
                     </a>
                     <ul class="dropdown-menu dd-menu">
                         <li class="px-3 py-2 d-flex align-items-center gap-2"
-                        <img src="https://picsum.photos/seed/u7/80/80.jpg"
-                             style="width:34px;height:34px;border-radius:8px;object-fit:cover;" alt="">
-                        <div>
-                            <div style="font-size:.85rem;font-weight:700;color:var(--text)">user</div>
-                            <div style="font-size:.7rem;color:var(--muted)">ahmed@mail.com</div>
-                        </div>
-                </li>
-                <li>
-                    <hr class="dd-divider">
-                </li>
-                <li><a class="dropdown-item dd-item"
-                       href="members.php?do=edit&userID=<?php echo $_SESSION['userID'] ?>">
-                        <span class="ic ic-g"><i class="bi bi-person-gear"></i></span> تعديل الملف الشخصي</a>
-                </li>
-                <li><a class="dropdown-item dd-item" href="members.php?do=manage"><span class="ic ic-b"><i
-                                    class="bi bi-gear" >
+                            <img src="https://picsum.photos/seed/u7/80/80.jpg"
+                                 style="width:34px;height:34px;border-radius:8px;object-fit:cover;" alt="">
+                            <div>
+                                <div style="font-size:.85rem;font-weight:700;color:var(--text)">user</div>
+                                <div style="font-size:.7rem;color:var(--muted)">ahmed@mail.com</div>
+                            </div>
+                        </li>
+                        <li>
+                            <hr class="dd-divider">
+                        </li>
+                        <li><a class="dropdown-item dd-item"
+                               href="../../members.php?do=edit&userID=<?php echo $_SESSION['userID'] ?>">
+                                <span class="ic ic-g"><i class="bi bi-person-gear"></i></span> تعديل الملف الشخصي</a>
+                        </li>
+                        <li><a class="dropdown-item dd-item" href="../../members.php?do=manage"><span class="ic ic-b"><i
+                                            class="bi bi-gear" >
 
                                     </i></span> الإعدادات</a></li>
-                <li><a class="dropdown-item dd-item" href="#"><span class="ic ic-p"><i
-                                    class="bi bi-shield-check"></i></span> الأمان والخصوصية</a></li>
-                <li><a class="dropdown-item dd-item" href="#"><span class="ic ic-o"><i
-                                    class="bi bi-moon-stars"></i></span> الوضع الليلي</a></li>
-                <li>
-                    <hr class="dd-divider">
+                        <li><a class="dropdown-item dd-item" href="#"><span class="ic ic-p"><i
+                                            class="bi bi-shield-check"></i></span> الأمان والخصوصية</a></li>
+                        <li><a class="dropdown-item dd-item" href="#"><span class="ic ic-o"><i
+                                            class="bi bi-moon-stars"></i></span> الوضع الليلي</a></li>
+                        <li>
+                            <hr class="dd-divider">
+                        </li>
+                        <li><a class="dropdown-item dd-item danger" href="../../logout.php"><span class="ic ic-r"><i
+                                            class="bi bi-box-arrow-left"></i></span> تسجيل الخروج</a></li>
+                    </ul>
                 </li>
-                <li><a class="dropdown-item dd-item danger" href="../../logout.php"><span class="ic ic-r"><i
-                                    class="bi bi-box-arrow-left"></i></span> تسجيل الخروج</a></li>
-            </ul>
-            </li>
             </ul>
 
             <div class="d-flex align-items-center gap-2 desk-only">
